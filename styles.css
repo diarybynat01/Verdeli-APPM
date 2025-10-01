@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --green-light: #a1b18d;
+  --green-dark: #006738;
+  --orange: #ed8202;
+  --yellow: #f8be5b;
+  --off-white: #f7e7ce;
+  --ruby: #cb164d;
+
+  --white: #edf2fe;
+  --black: #202020;
+  --grey: #666666;
+  --primary: #006738;
+  --primary-hover: #00331c;
+  --primary-light: #006738;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Amaranth", sans-serif;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 35px;
+  /* background-color: var(--primary); */
+  color: #fff;
+  padding: 30px 0;
+}
+.contenedor {
+  max-width: 120rem;
+  padding: 2rem;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* oculto lo que queda fuera del .contenedor */
+  contain: paint;
+}
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor .contenedor-items {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 30px;
+  grid-row-gap: 30px;
+  /* width: 60%; */
+  width: 100%;
+  transition: 0.3s;
+}
+.contenedor .contenedor-items .item {
+  max-width: 200px;
+  margin: auto;
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+.contenedor .contenedor-items .item .img-item {
+  width: 100%;
+}
+.contenedor .contenedor-items .item:hover {
+  box-shadow: 0 0 10px #666;
+  scale: 1.05;
+}
+.contenedor .contenedor-items .item .titulo-item {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Amaranth", sans-serif;
+}
+.contenedor .contenedor-items .item .precio-item {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item {
+  display: block;
+  margin: 2rem auto 0.8rem auto;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-family: "Amaranth", sans-serif;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+/* seccion carrito */
+.carrito {
+  border: 1px solid #666;
+  width: 35%;
+  margin-top: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: auto;
+  position: sticky !important;
+  top: 0;
+  transition: 0.3s;
+  /* Estilos para ocultar */
+  margin-right: -100%;
+  opacity: 0;
+}
+.carrito .header-carrito {
+  background-color: var(--primary);
+  color: var(--white);
+  font-family: "Amaranth", sans-serif;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 2.5rem;
+}
+.carrito .carrito-item {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  position: relative;
+  border-bottom: 1px solid #666;
+  padding: 20px;
+}
+.carrito .carrito-item img {
+  margin-right: 20px;
+}
+.carrito .carrito-item .carrito-item-titulo {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.carrito .carrito-item .selector-cantidad {
+  display: inline-block;
+  margin-right: 25px;
+}
+.carrito .carrito-item .carrito-item-cantidad {
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  display: inline-block;
+  width: 30px;
+  padding: 5px;
+  text-align: center;
+}
+.carrito .carrito-item .selector-cantidad i {
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+}
+.carrito .carrito-item .carrito-item-precio {
+  font-weight: bold;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.carrito .carrito-item .btn-eliminar {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  color: var(--primary);
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  display: block;
+  background: transparent;
+  z-index: 20;
+}
+.carrito .carrito-item .btn-eliminar i {
+  pointer-events: none;
+}
+
+.carrito-total {
+  background-color: #f3f3f3;
+  padding: 30px;
+}
+.carrito-total .fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.carrito-total .btn-pagar {
+  display: block;
+  width: 100%;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 5px;
+  font-size: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.carrito-total .btn-pagar:hover {
+  scale: 1.05;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .contenedor {
+    display: block;
+  }
+  .contenedor-items {
+    width: 100% !important;
+  }
+  .carrito {
+    width: 100%;
+  }
+}
+
+body {
+  font-size: 16px; /* 1rem = 10px */
+  min-height: 100vh;
+  background-color: var(--white);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 5%; /* proporcional al ancho de la pantalla */
+  box-sizing: border-box;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap; /* evita que se corte el último item */
+}
+
+header ul {
+  position: relative;
+}
+
+header ul li {
+  position: relative;
+  list-style-type: none;
+  float: left;
+}
+
+header ul li a {
+  font-family: "Amaranth", sans-serif;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 2.5rem 2.5rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul li a:hover {
+  background-color: var(--primary-hover);
+}
+
+header ul li ul {
+  position: absolute;
+  left: 0;
+  width: 15rem;
+  background-color: var(--primary-light);
+  display: none;
+}
+
+header ul li:hover ul {
+  display: block;
+}
+
+header ul li ul li {
+  position: relative;
+  width: 100%;
+  background-color: var(--primary-light);
+  border: solid 1px var(--primary-hover);
+}
+
+@media (max-width: 900px) {
+  header {
+    padding: 0rem 2rem;
+  }
+  header nav {
+    position: absolute;
+    width: 100%;
+    top: 6rem;
+    left: 0;
+    background-color: var(--primary);
+    display: none;
+  }
+
+  header nav ul li {
+    width: 100%;
+  }
+  header nav ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header nav ul li ul li {
+    background-color: var(--primary-light);
+  }
+  .menuToggle {
+    position: relative;
+    width: 4rem;
+    height: 5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuToggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    transform: translateY(-1.2rem);
+    box-shadow: 0 1.2rem var(--white);
+  }
+  .menuToggle::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    transform: translateY(1.2rem);
+  }
+  header.active nav {
+    display: block;
+  }
+  header.active .menuToggle::before {
+    transform: rotate(45deg);
+    box-shadow: 0 0 var(--white);
+  }
+  header.active .menuToggle::after {
+    transform: rotate(315deg);
+    box-shadow: 0 0 var(--white);
+  }
+}
+
+.section-title {
+  font-family: "Amaranth", sans-serif;
+  text-align: center;
+  font-size: 5rem; /* mismo tamaño que tenías */
+  color: var(--black); /* o el color que quieras */
+  margin-top: 10rem; /* espacio suficiente para bajar el h1 debajo del header */
+  margin-bottom: 2rem; /* separación con lo que sigue */
+}
+
+.contenedor .contenedor-items .item .precio-item {
+  display: flex;
+  justify-content: center;
+  font-family: "Amaranth", sans-serif;
+  gap: 0.5rem;
+  font-size: 2rem;
+  color: var(--black);
+  margin-top: 0.5rem;
+}
+
+.contenedor .contenedor-items .item .precio-item small {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Contenedor de unidad en el carrito */
+.carrito-item .selector-unidad {
+  display: flex;
+  gap: 1rem; /* espacio entre opciones */
+  margin: 10px 0;
+  font-size: 1.8rem; /* texto más grande */
+}
+
+/* Estilo de los radio buttons */
+.carrito-item .selector-unidad input[type="radio"] {
+  transform: scale(1.5); /* agranda el botón */
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* Estilo de la etiqueta */
+.carrito-item .selector-unidad label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none; /* evita que el texto se seleccione accidentalmente */
+}
+.precio-item {
+  margin-bottom: 1rem;
+}
+
+.descripcion-item {
+  color: var(--grey);
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.origen {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-light);
+  font-weight: 900;
+}
+
+.logo-img {
+  width: auto;
+  height: 7rem;
+}
