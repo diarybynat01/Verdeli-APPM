@@ -228,3 +228,20 @@ let header = document.querySelector('header');
 menuToggle.onclick = function () {
   header.classList.toggle('active');
 }
+
+document.querySelectorAll("header ul li a").forEach((link) => {
+  const submenu = link.nextElementSibling;
+  if (submenu && submenu.tagName === "UL") {
+    link.addEventListener("click", (e) => {
+      // si está cerrado, abrir menú y bloquear navegación
+      if (!link.parentElement.classList.contains("open")) {
+        e.preventDefault(); // evita que abra la página
+        link.parentElement.classList.add("open");
+      } 
+      // si ya está abierto, entonces sí deja navegar
+      else {
+        link.parentElement.classList.remove("open");
+      }
+    });
+  }
+});
