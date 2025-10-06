@@ -60,11 +60,19 @@ header h1 {
   margin: auto;
   border: 1px solid #666;
   border-radius: 10px;
-  padding: 20px;
+  padding: 2rem;
   transition: 0.3s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 44rem; /* puedes ajustar este valor */
 }
 .contenedor .contenedor-items .item .img-item {
   width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 .contenedor .contenedor-items .item:hover {
   box-shadow: 0 0 10px #666;
@@ -76,6 +84,7 @@ header h1 {
   text-align: center;
   text-transform: uppercase;
   font-family: "Amaranth", sans-serif;
+  padding-bottom: 2rem;
 }
 .contenedor .contenedor-items .item .precio-item {
   display: block;
@@ -419,15 +428,88 @@ header ul li ul li {
   color: var(--grey);
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+  flex-grow: 1;
+  text-align: left;
+  font-size: 1.4rem;
 }
 
 .origen {
   font-family: "Roboto", sans-serif;
   color: var(--primary-light);
   font-weight: 900;
+  font-size: 1.4rem;
+  padding-top: .5rem;
 }
 
 .logo-img {
   width: auto;
   height: 7rem;
+}
+
+#modal-gracias {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#modal-gracias.activo {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  animation: aparecer 0.4s ease;
+  max-width: 400px;
+  width: 90%;
+}
+
+.modal-contenido h2 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.modal-contenido p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.modal-contenido button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-contenido button:hover {
+  background-color: #256427;
+}
+
+@keyframes aparecer {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

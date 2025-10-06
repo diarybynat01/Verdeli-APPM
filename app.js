@@ -43,14 +43,32 @@ function ready() {
 }
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked() {
-  alert("Gracias por la compra");
-  //Elimino todos los elmentos del carrito
+  // Mostrar modal visual en lugar del alert
+  const modal = document.getElementById('modal-gracias');
+  modal.classList.add('activo');
+
+  // Eliminar todos los elementos del carrito
   var carritoItems = document.getElementsByClassName('carrito-items')[0];
   while (carritoItems.hasChildNodes()) {
-    carritoItems.removeChild(carritoItems.firstChild)
+    carritoItems.removeChild(carritoItems.firstChild);
   }
   actualizarTotalCarrito();
   ocultarCarrito();
+
+  // Cerrar modal con el botón
+  document.getElementById('cerrar-modal').addEventListener('click', () => {
+    modal.classList.remove('activo');
+  });
+
+  // Cerrar modal al hacer clic fuera del cuadro
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.classList.remove('activo');
+  });
+
+  // Cierre automático en 3 segundos
+  setTimeout(() => {
+    modal.classList.remove('activo');
+  }, 5000);
 }
 //Funciòn que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event) {

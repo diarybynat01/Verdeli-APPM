@@ -1,120 +1,477 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" async></script>
-    <title>Verdeli</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html"><img class="logo-img" src="img/logo.png" alt="logo"></a>
-      <div class="menuToggle"></div>
-      <nav>
-        <ul>
-          <li>
-            <a href="templates/frutas.html">Frutas <b>▼</b></a>
-            <ul>
-              <li><a href="templates/frutas-nacional.html">Nacional</a></li>
-              <li><a href="templates/frutas-importadas.html">Importado</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="templates/verduras.html">Verduras <b>▼</b></a>
-            <ul>
-              <li><a href="templates/verduras-nacional.html">Nacional</a></li>
-              <li><a href="templates/verduras-importadas.html">Importado</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="templates/pulpas.html">Pulpas <b>▼</b></a>
-            <ul>
-              <li><a href="templates/pulpas-congeladas.html">Congelada</a></li>
-              <li><a href="templates/pulpas-frescas.html">Fresca</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="templates/zumos.html">Zumos <b>▼</b></a>
-            <ul>
-              <li><a href="templates/zumos-congelados.html">Congelada</a></li>
-              <li><a href="templates/zumos-frescos.html">Fresca</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <h1 class="section-title">Todos los productos</h1>
-    <section class="contenedor">
-      <div class="contenedor-items">
-        <div class="item">
-          <span class="titulo-item">Manzana Roja</span>
-          <img src="img/manzana.webp" alt="" class="img-item" />
-          <span class="precio-item" data-kilo="7000" data-libra="3200"
-            >$7.000/Kg</span
-          >
-          <p class="descripcion-item">
-            Manzanas frescas, crujientes nacionales
-          </p>
-          <p class="origen">Nacional</p>
-          <button class="boton-item">Agregar al Carrito</button>
-        </div>
 
-        <div class="item">
-          <span class="titulo-item">Manzana Roja</span>
-          <img src="img/manzana.webp" alt="" class="img-item" />
-          <span class="precio-item" data-kilo="7000" data-libra="3200"
-            >$7.000/Kg</span
-          >
-          <p class="descripcion-item">
-            Manzanas frescas, crujientes nacionales
-          </p>
-          <p class="origen">Nacional</p>
-          <button class="boton-item">Agregar al Carrito</button>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" async></script>
+  <title>Verdeli</title>
+</head>
 
-        <div class="item">
-          <span class="titulo-item">Manzana Roja</span>
-          <img src="img/manzana.webp" alt="" class="img-item" />
-          <span class="precio-item" data-kilo="7000" data-libra="3200"
-            >$7.000/Kg</span
-          >
-          <p class="descripcion-item">
-            Manzanas frescas, crujientes nacionales
-          </p>
-          <p class="origen">Nacional</p>
-          <button class="boton-item">Agregar al Carrito</button>
-        </div>
+<body>
 
-        <div class="item">
-          <span class="titulo-item">Manzana Roja</span>
-          <img src="img/manzana.webp" alt="" class="img-item" />
-          <span class="precio-item" data-kilo="7000" data-libra="3200"
-            >$7.000/Kg</span
-          >
-          <p class="descripcion-item">
-            Manzanas frescas, crujientes nacionales
-          </p>
-          <p class="origen">Nacional</p>
-          <button class="boton-item">Agregar al Carrito</button>
-        </div>
+  <header>
+    <a href="index.html">
+      <img class="logo-img" src="img/logo.png" alt="Verdeli logo" />
+    </a>
+    <div class="menuToggle"></div>
+    <nav>
+      <ul>
+        <li>
+          <a href="templates/frutas.html">Frutas <b>▼</b></a>
+          <ul>
+            <li><a href="templates/frutas-citricas.html">Cítricas</a></li>
+            <li><a href="templates/frutas-tropicales.html">Tropicales</a></li>
+            <li><a href="templates/frutas-carozo.html">De carozo y semilla</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="templates/verduras.html">Verduras <b>▼</b></a>
+          <ul>
+            <li><a href="templates/verduras-hoja.html">De hoja</a></li>
+            <li><a href="templates/verduras-frescas.html">Otras verduras frescas</a></li>
+            <li><a href="templates/verduras-tuberculos.html">Tubérculos y raíces</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="templates/pulpas.html">Pulpas <b>▼</b></a>
+          <ul>
+            <li><a href="templates/pulpas-citricas.html">Cítricas</a></li>
+            <li><a href="templates/pulpas-tropicales.html">Tropicales</a></li>
+            <li><a href="templates/pulpas-mixtas.html">Mixtas</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="templates/zumos.html">Zumos <b>▼</b></a>
+          <ul>
+            <li><a href="templates/zumos-simples.html">Simples</a></li>
+            <li><a href="templates/zumos-mezclas.html">Mezclas</a></li>
+            <li><a href="templates/zumos-funcionales.html">Funcionales</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <h1 class="section-title">Todos los productos</h1>
+  <section class="contenedor">
+    <div class="contenedor-items">
+
+      <div class="item">
+        <span class="titulo-item">Manzana Gala</span>
+        <img src="/verdeli-appm/img/manzanas.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Dulce, crujiente y jugosa. Perfecta como snack o en ensaladas. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
       </div>
-      <!-- Carrito de Compras -->
-      <div class="carrito" id="carrito">
-        <div class="header-carrito">
-          <h2>Tu Carrito</h2>
-        </div>
 
-        <div class="carrito-items">
-          <!-- 
+      <div class="item">
+        <span class="titulo-item">Pera</span>
+        <img src="/verdeli-appm/img/peras.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Jugosa y suave, muy usada en postres y compotas. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Durazno</span>
+        <img src="/verdeli-appm/img/duraznos.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Pulpa aromática, sabor dulce, excelente para mermeladas y repostería. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Naranja Valencia</span>
+        <img src="/verdeli-appm/img/Naranja.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Naranja jugosa, pulpa dulce-ácida, ideal para jugos y desayunos. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Limón Tahití</span>
+        <img src="/verdeli-appm/img/Limon.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Limón verde aromático, sin semillas, excelente rendimiento en jugos y marinados. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Mandarina</span>
+        <img src="/verdeli-appm/img/Mandarina.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Dulce, fácil de pelar, perfecta como merienda o para ensaladas. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Mango Tommy</span>
+        <img src="/verdeli-appm/img/Mango Tommy.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Pulpa fibrosa y dulce, ideal para batidos, ensaladas y salsas. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Piña</span>
+        <img src="/verdeli-appm/img/Piña.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Muy dulce y jugosa, baja acidez, perfecta para jugos y postres. Compra por unidad o peso.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Maracuyá</span>
+        <img src="/verdeli-appm/img/Maracuyá.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Sabor intenso y aromático, ideal para jugos y repostería. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de naranja</span>
+        <img src="/verdeli-appm/img/Pulpa de naranja.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Pulpa 100% natural, sin azúcar añadida, lista para jugos. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de mandarina</span>
+        <img src="/verdeli-appm/img/Pulpa de mandarina.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Dulce y aromática, lista para preparar bebidas y postres. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de limón</span>
+        <img src="/verdeli-appm/img/pulpa limon.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Ideal para jugos y limonadas. Ácida y fresca. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de mango</span>
+        <img src="/verdeli-appm/img/Mango pulpa.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Sabor dulce y tropical. Ideal para batidos, helados y postres. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de piña</span>
+        <img src="/verdeli-appm/img/Pulpa de piña.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Natural, jugosa y refrescante. Perfecta para jugos. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de guanábana</span>
+        <img src="/verdeli-appm/img/pulpa-de-guanabana.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Pulpa blanca y cremosa, lista para jugos y batidos. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de frutos rojos</span>
+        <img src="/verdeli-appm/img/pulpa de frutos rojos.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Mezcla de fresa, mora y arándano. Rica en antioxidantes. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de lulo con mora</span>
+        <img src="/verdeli-appm/img/lulo mora.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Exótica, sabor ácido-dulce. Perfecta para jugos fríos. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pulpa de maracuyá con piña</span>
+        <img src="/verdeli-appm/img/maracuya piña.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="8000" data-libra="4000">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Tropical y refrescante. Ideal para jugos de verano. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Espinaca</span>
+        <img src="/verdeli-appm/img/Espinaca.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Rica en hierro, ideal para sopas, smoothies y salteados. Compra por atado o peso.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Lechuga Romana</span>
+        <img src="/verdeli-appm/img/Lechuga.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Hojas crujientes, perfecta para ensaladas frescas. Compra por unidad o peso.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Acelga</span>
+        <img src="/verdeli-appm/img/Acelga.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Hojas grandes, sabor suave. Útil en cremas y salteados. Compra por atado o peso.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Brócoli</span>
+        <img src="/verdeli-appm/img/Brocolí.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Alto en fibra y vitaminas. Ideal al vapor, en sopas o salteados. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pimentón rojo</span>
+        <img src="/verdeli-appm/img/Pimenton Rojo.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Dulce y crujiente, perfecto para ensaladas, rellenos o asados. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Pepino cohombro</span>
+        <img src="/verdeli-appm/img/Pepino.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Refrescante, rico en agua. Ideal para ensaladas y jugos verdes. Compra por unidad o peso.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Zanahoria</span>
+        <img src="/verdeli-appm/img/Zanahoria.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Crujiente y dulce. Se usa en sopas, ensaladas y jugos. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Papa criolla</span>
+        <img src="/verdeli-appm/img/papa-criolla-3432646_1280.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Papa amarilla pequeña, ideal para freír o asar. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Yuca</span>
+        <img src="/verdeli-appm/img/yuca.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Tubérculo energético, perfecto para sancochos y frituras. Compra por kg o lb.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Jugo de naranja</span>
+        <img src="/verdeli-appm/img/Jugo de naranja.jpg" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Jugo 100% natural, sin conservantes.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Jugo de mandarina</span>
+        <img src="/verdeli-appm/img/jugo mandarina.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Dulce y aromático, recién exprimido.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Jugo de guayaba</span>
+        <img src="/verdeli-appm/img/jugo de guayaba.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Refrescante y rico en vitamina C.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Jugo tropical (piña + mango)</span>
+        <img src="/verdeli-appm/img/piña mango.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Exótico, fresco y lleno de energía. Jugo cítrico, Balance dulce-ácido, ideal en desayunos.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Jugo cítrico (naranja + mandarina)</span>
+        <img src="/verdeli-appm/img/naranja mandarina.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Balance dulce-ácido, ideal en desayunos.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Jugo andino (lulo + mora) </span>
+        <img src="/verdeli-appm/img/jugo lulo mora.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Refrescante, con sabor tradicional.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Detox verde (espinaca + manzana + piña)</span>
+        <img src="/verdeli-appm/img/jugo verde.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Ideal para desintoxicar y refrescar.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Energizante (maracuyá + jengibre) </span>
+        <img src="/verdeli-appm/img/maracuya gengibre.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Aporta vitalidad y refuerza defensas.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+      <div class="item">
+        <span class="titulo-item">Antioxidante (frutos rojos + naranja) </span>
+        <img src="/verdeli-appm/img/antioxidante.png" alt="" class="img-item" />
+        <span class="precio-item" data-kilo="7000" data-libra="3200">$7.000/Kg</span>
+        <p class="descripcion-item">
+          Rico en antioxidantes, cuida tu energía y piel.
+        </p>
+        <p class="origen">Nacional</p>
+        <button class="boton-item">Agregar al Carrito</button>
+      </div>
+
+
+    </div>
+    <!-- Carrito de Compras -->
+    <div class="carrito" id="carrito">
+      <div class="header-carrito">
+        <h2>Tu Carrito</h2>
+      </div>
+
+      <div class="carrito-items">
+        <!-- 
                 <div class="carrito-item">
                     <img src="img/boxengasse.png" width="80px" alt="">
                     <div class="carrito-item-detalles">
@@ -146,17 +503,26 @@
                    </button>
                 </div>
                  -->
-        </div>
-        <div class="carrito-total">
-          <div class="fila">
-            <strong>Tu Total</strong>
-            <span class="carrito-precio-total"> $120.000,00 </span>
-          </div>
-          <button class="btn-pagar">
-            Pagar <i class="fa-solid fa-bag-shopping"></i>
-          </button>
-        </div>
       </div>
-    </section>
-  </body>
+      <div class="carrito-total">
+        <div class="fila">
+          <strong>Tu Total</strong>
+          <span class="carrito-precio-total"> $120.000,00 </span>
+        </div>
+        <button class="btn-pagar">
+          Pagar <i class="fa-solid fa-bag-shopping"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div id="modal-gracias" class="modal-oculto">
+    <div class="modal-contenido">
+      <h2>¡Gracias por tu compra! 🛍️</h2>
+      <p>Tu pedido ha sido procesado correctamente.</p>
+      <button id="cerrar-modal">Cerrar</button>
+    </div>
+  </div>
+
+</body>
+
 </html>
